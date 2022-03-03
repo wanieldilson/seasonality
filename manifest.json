@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Seasonality",
+  "description": "A Chrome extension to help you find what's in season when you're buying food online",
+  "version": "0.0.1",
+  "icons": {
+      "16": "images/carrot.png",
+      "48": "images/carrot.png",
+      "128": "images/carrot.png"
+  },
+  "options_page": "",
+  "action": {
+      "default_title": "Seasonality - Shop local, be sustainable!",
+      "default_popup": "popup/popup.html"
+  },
+  "permissions": [],
+  "host_permissions": [
+      "*://*/*"
+  ],
+  "content_scripts": [ {
+    "matches": ["https://*/*"],
+    "js": ["content.js"]
+  } ]
+}
